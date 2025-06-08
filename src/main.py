@@ -109,20 +109,8 @@ def run_boa():
         json.dump(all_reviews, f, ensure_ascii=False, indent=4, default=str)
     print("BOA Scrape Data Saved")
 
-def preprocess_dashed():
-    """
-    Preprocess dashens data so that it can easily be
-    loaded into a dataframe
-    """
-    # Load JSON from a file
-    with open("data/scrape_results/dashen/review_dashen_bank_scrape_result.json", "r", encoding="utf-8") as f:
-        # print("overhere")
-        dashen_json_data = json.load(f)
-        # print("dashen_json_data: ", dashen_json_data)
 
 if __name__ == "__main__":
     run_dashen()
     run_cbe()
     run_boa()
-
-    # preprocess_dashed()
